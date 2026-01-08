@@ -9,7 +9,54 @@
     <h1 id="heading">DOM - Document Object Model</h1>
     <p class="info">Dom is a programming interface for web documents.</p>
     <p class="info">It represents the page so that programs can change the document structure, style, and content.</p>
+    <button onclick="HighLightText()">Highlight Text</button>
 
+    <hr>
+
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterList()">
+    
+    <ul id="itemList">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Cherry</li>
+        <li>Banana</li>
+    </ul>
+
+    <hr>
+    
+    <h1>Most Frequent Word</h1>
+    <div id="text">This is a test. This test is only a test.</div>
+    <div id="result"></div>
+    
+    <hr>
+    <h1>Zebra Patter</h1>
+    <ul id="cars">
+        <li>BMW</li>
+        <li>Mahindra</li>
+        <li>Audi</li>
+        <li>Toyota</li>
+        <li>Honda</li>
+        <li>Hundai</li>
+        <li>Tata</li>
+        <li>Suzuki</li>
+    </ul>
+
+    <hr>
+    <h1>Find and Replace a text</h1>
+    <input type="text" id="findText" placeholder="Find Text" required>
+    <input type="text" id="replaceText" placeholder="Replace Text" required>
+    <button onclick="findAndReplace()">Find and Replace</button>
+    <div id="textNotFound"></div>
+
+    <hr>
+    <h1>Extract and Count Unique Links from a Page</h1>
+    <a href="https://google.com">Google</a>
+    <a href="https://openai.com">OpenAI</a>
+    <a href="https://google.com">Google Again</a>
+
+    
     <script defer src="./index.js"></script>
+
 </body>
 </html>
