@@ -18,3 +18,18 @@
     - NodeList
         - An Array of Nodes
     - NodeNameMap
+
+- Accessing DOM
+    - ID Selector
+    - Class Selector
+    - Tag Selector
+    - Query Selector
+    - Query Selector All
+
+- HTML Collection vs NodeList
+    - HTML Collection is live, NodeList is static.
+    
+    - HTMLCollection: Contains only HTML elements
+    Returned by:
+        getElementsByTagName()
+        getElementsByClassName()
