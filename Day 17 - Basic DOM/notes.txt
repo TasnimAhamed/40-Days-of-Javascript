@@ -1,0 +1,20 @@
+## Document Object Model (DOM)
+
+- What is DOM?
+    - DOM is a programming interface for web documents.
+                - programming interface: set of rules, objects and functions.
+    - It represents the page so that programs can change the document structure, style, and content.
+    - The DOM represents the document as a tree of nodes and objects that have properties and methods.
+
+- DOM Types
+    - Document
+        - Document is the root of the DOM tree. Complete Web page is a document.
+    - Node
+        - A generic term for any elements in the DOM tree. Element Node, Text Node
+    - Element
+        - A Specific type of node that represents an HTML element.
+    - Attribute
+        - Extra information about an element.
+    - NodeList
+        - An Array of Nodes
+    - NodeNameMap
