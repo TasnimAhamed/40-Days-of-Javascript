@@ -1,7 +1,5 @@
 # 🚀 40 Days of Javascript
 
----
-
 ## 📅 Day 17: Basic DOM
 
 ### 📝 Notes Summary
