@@ -1,7 +1,7 @@
 // DOM Types
-    console.log(document);
-    console.log(document.body);
-    console.log(document.head);
+console.log(document);
+console.log(document.body);
+console.log(document.head);
 
 
 // Accessing DOM: Element(tag, attribute, ID, Class)
@@ -41,7 +41,8 @@ function HighLightText() {
     const allParaElems = document.querySelectorAll(".info");
     
     allParaElems.forEach((paraElem) => {
-        paraElem.style.backgroundColor = "yellow";
+        paraElem.style.backgroundColor = "black";
+        paraElem.style.color = "white";
     })
 }
 
@@ -74,7 +75,8 @@ words.forEach((word) => {
     word = word.toLowerCase().replace(/\.+$/, '');;
     if (wordCount[word]) {
         wordCount[word]++;
-    } else {
+    } 
+    else {
         wordCount[word] = 1;
     }
 })
@@ -91,7 +93,6 @@ console.log(mxWord, mxCount);
 
 const resultElem = document.getElementById("result");
 resultElem.innerText = `${mxWord} - ${mxCount}`;
-
 
 // 2. Zebra Pattern
 const carsListItems = document.querySelectorAll("#cars li");
@@ -119,15 +120,18 @@ function findAndReplace() {
     let replaceTextValue = replaceText.value;
     let paraElem = document.getElementById("text");
     if (paraElem.innerText.includes(findTextValue)) {
+        // Learn RegExp
         const regex = new RegExp(findTextValue, "gi");
         paraElem.innerText = paraElem.innerText.replace(regex, replaceTextValue);
-    } else {
+    } 
+    else {
         textNotFound.innerText = "Text Not Found";
     }
 }
 
 // 5. Extract and Count Unique Links from a Page
 const links = document.querySelectorAll("a");
+// Learn Set
 const linkCount = new Set();
 links.forEach((link) => {
     linkCount.add(link.href);

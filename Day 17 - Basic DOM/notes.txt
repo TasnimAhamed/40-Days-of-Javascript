@@ -18,6 +18,7 @@
     - NodeList
         - An Array of Nodes
     - NodeNameMap
+        - Collection of Attribute
 
 - Accessing DOM
     - ID Selector
