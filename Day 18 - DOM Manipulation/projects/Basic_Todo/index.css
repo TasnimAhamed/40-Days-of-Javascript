@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+}
+
+button {
+    padding: 6px 12px;
+    margin-left: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f0f0f0;
+    width: calc(100% - 70% - 14px);
+}
+
+button:hover {
+    background: #e0e0e0;
+}
+
+#searchInput {
+    margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.2rem;
+}
+
+li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+li.done span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+li.hidden {
+    display: none;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+input[type="checkbox"]:hover {
+    border-color: #888;
+}
+
+input[type="checkbox"]:checked {
+    background: #4a90e2;
+    border-color: #4a90e2;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.del-btn {
+    margin-left: auto;
+    border: none;
+    background: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.del-btn:hover {
+    color: #e00;
+}

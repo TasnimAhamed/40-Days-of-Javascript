@@ -1,0 +1,20 @@
+.main-class{
+    font-size: large;
+    padding: 4px 20px;
+    border: 2px solid gainsboro;
+    border-radius: 4px;
+}
+
+.secondary-class{
+    font-size: large;
+    padding: 4px 20px;
+    border: 2px solid green;
+    background: teal;
+    color: white;
+    border-radius: 4px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+}
