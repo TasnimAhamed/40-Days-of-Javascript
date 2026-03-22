@@ -4,7 +4,7 @@ const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const taskList = document.getElementById("taskList");
 
-const tasks = [];
+let editElem = null;
 
 function addTask() {
     const text = taskInput.value.trim();
@@ -12,7 +12,6 @@ function addTask() {
         return;
     }
     const task = { id: Date.now(), text: text, isCompleted: false };
-    tasks.push(task);
     renderTask(task);
     taskInput.value = "";
     searchInput.value = "";
@@ -43,10 +42,30 @@ function renderTask(task) {
         liElem.remove();
     });
 
-    liElem.append(cbElem, spanElem, delBtn);
+    const editBtn = document.createElement("button");
+    editBtn.innerText = "Edit";
+    editBtn.classList.add("edit-btn");
+    editBtn.addEventListener("click", () => {
+        editTask(liElem);
+    });
+
+    liElem.append(cbElem, spanElem, editBtn, delBtn);
     taskList.appendChild(liElem)
 }
-
+function editTask(liElem) {
+    const spanElem = liElem.querySelector("span");
+    const text = spanElem.innerText;
+    taskInput.value = text;
+    addBtn.innerText = "Update Task";
+    editElem = liElem;
+}
+function updateTask(updateElem) {
+    const spanElem = updateElem.querySelector("span");
+    spanElem.innerText = taskInput.value.trim();
+    taskInput.value = "";
+    editElem = null;
+    addBtn.innerHTML = "Add Task"
+}
 function searchTask() {
     const searchTerm = searchInput.value.trim().toLowerCase();
     const liElems = taskList.querySelectorAll("li");
@@ -56,10 +75,22 @@ function searchTask() {
     });
 }   
 
-addBtn.addEventListener("click", addTask);
+addBtn.addEventListener("click", function(){
+    if (editElem) {
+        updateTask(editElem);
+    }
+    else {
+        addTask();
+    }
+});
 taskInput.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
-        addTask();
+        if (editElem) {
+            updateTask(editElem);
+        }
+        else {
+            addTask();
+        }
     }
 })
 

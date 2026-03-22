@@ -100,15 +100,24 @@ input[type="checkbox"]:checked::after {
     transform: rotate(45deg);
 }
 
-.del-btn {
-    margin-left: auto;
+.del-btn,
+.edit-btn {
     border: none;
     background: none;
     color: #aaa;
     cursor: pointer;
     font-size: 1rem;
 }
+.edit-btn{
+    margin-left: auto;
+}
 
 .del-btn:hover {
     color: #e00;
+}
+.edit-btn:hover {
+    color: #008000;
+}
+li.done .edit-btn{
+    pointer-events: none;
 }
