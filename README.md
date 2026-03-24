@@ -1,5 +1,33 @@
 # 🚀 40 Days of Javascript
 
+## 📅 Day 1: Intro to JavaScript
+
+### 📝 Script Loading Strategies
+Understanding how the browser handles HTML parsing and `<script>` execution:
+
+1. **`<script>` tag in `<head>`**
+   * HTML parsing **pauses**.
+   * Script is fetched and executed immediately.
+   * HTML parsing resumes after execution.
+   * *(Blocks rendering)*
+
+2. **`<script>` tag at the end of the `<body>`**
+   * HTML parsing **completes** first.
+   * Script is then fetched and executed.
+   * *(Ensures DOM is loaded before execution)*
+
+3. **`<script>` tag with `async`**
+   * Script fetches **in parallel** with HTML parsing.
+   * HTML parsing pauses **only** to execute the script when fetching finishes.
+   * *(Great for independent scripts like analytics)*
+
+4. **`<script>` tag with `defer`**
+   * Script fetches **in parallel** with HTML parsing.
+   * Script execution is **deferred** until HTML parsing is completely finished.
+   * *(Best overall practice for main scripts)*
+
+---
+
 ## 📅 Day 17: Basic DOM
 
 ### 📝 Notes Summary
