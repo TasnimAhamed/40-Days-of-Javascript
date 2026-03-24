@@ -1,0 +1,11 @@
+#father {
+    padding: 30px;
+    background-color: #cfd8dc;
+}
+#son {
+    margin-left: 10px; 
+    padding: 12px 20px;
+    background-color: #90a4ae;
+    border: none;
+    cursor: pointer;
+}
