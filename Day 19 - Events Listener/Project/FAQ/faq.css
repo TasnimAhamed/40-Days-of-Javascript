@@ -1,0 +1,141 @@
+*, 
+*::before, 
+*::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+:root {
+    --bg:      #0e0e0e;
+    --surface: #161616;
+    --border:  #2a2a2a;
+    --accent:  #c9a96e;
+    --text:    #e8e4dc;
+    --muted:   #7a7670;
+    --radius:  4px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.faq-wrap {
+    width: 100%;
+    max-width: 740px;
+}
+
+.faq-header {
+    margin-bottom: 56px;
+}
+
+.faq-header p {
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: .7rem;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+.faq-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-of-type {
+    border-top: 1px solid var(--border);
+}
+
+.faq-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 0;
+    cursor: pointer;
+    user-select: none;
+    transition: color .25s;
+}
+
+.faq-label:hover {
+    color: var(--accent);
+}
+
+.faq-question {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .01em;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .25s, background .25s, transform .35s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--muted);
+    transition: stroke .25s;
+}
+
+.faq-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .38s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-body-inner {
+    overflow: hidden;
+}
+
+.faq-answer {
+    font-size: .9375rem;
+    line-height: 1.75;
+    color: var(--muted);
+    padding-bottom: 24px;
+    padding-right: 56px;
+}
+
+/* ── open state: your JS should toggle .is-open on .faq-item ── */
+.faq-item.is-open .faq-label {
+    color: var(--accent);
+}
+
+.faq-item.is-open .faq-icon {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: rotate(180deg);
+}
+
+.faq-item.is-open .faq-icon svg {
+    stroke: #0e0e0e;
+}
+
+.faq-item.is-open .faq-body {
+    grid-template-rows: 1fr;
+}
