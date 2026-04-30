@@ -28,6 +28,44 @@ Understanding how the browser handles HTML parsing and `<script>` execution:
 
 ---
 
+## 📅 Day 2: Variables and Data Types
+
+### 📝 Notes Summary
+
+* **Variables**
+  Containers used to store data.
+
+* **Data Types**
+  * **Primitive Data Types (Immutable):**
+    * `String` - Text values (e.g., `"Hello"`)
+    * `Number` - Numeric values (e.g., `25`, `3.14`)
+    * `Boolean` - True/False (e.g., `true`, `false`)
+    * `Undefined` - A variable declared but not assigned
+    * `Null` - Represents "nothing"
+    * `BigInt` - Large numbers
+    * `Symbol` - Unique identifiers
+  * **Non-Primitive / Reference Data Types (Mutable):**
+    * `Object` - Collection of key-value pairs
+    * `Array` - Ordered list of values
+    * `Function` - Code that can be executed
+
+* **Naming Conventions**
+  * **Rules:**
+    * Variable name can't start with a number, or special characters except `_`.
+    * Variable name can contain letters, numbers, and underscores.
+    * Variable name can't be a reserved keyword.
+  * **Conventions (Best Practices):**
+    * `camelCase` - for variables and functions
+    * `PascalCase` - for classes and constructors
+    * `snake_case` - for variables and functions (optional)
+
+* **var vs let vs const**
+  * `var`: Function-scoped, can be re-declared and re-assigned.
+  * `let`: Block-scoped, can be re-assigned but cannot be re-declared.
+  * `const`: Block-scoped, cannot be re-assigned and cannot be re-declared.
+
+---
+
 ## 📅 Day 17: Basic DOM
 
 ### 📝 Notes Summary
