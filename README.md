@@ -66,6 +66,39 @@ Understanding how the browser handles HTML parsing and `<script>` execution:
 
 ---
 
+## 📅 Day 3: Operators and Expressions
+
+### 📝 Notes Summary
+
+* **Expressions**
+  A statement that evaluates to a value.
+
+* **Operators**
+  * **Arithmetic:** `+`, `-`, `*`, `/`, `%`, `**`
+  * **Assignment:** `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`
+  * **Comparison:** 
+    * Loose: `==`, `!=`
+    * Strict: `===`, `!==`
+    * Relational: `>`, `<`, `>=`, `<=`
+  * **Logical:** `&&` (AND), `||` (OR), `!` (NOT), `??` (Nullish Coalescing)
+  * **Unary:** `++` (Increment), `--` (Decrement)
+  * **Ternary:** `condition ? exprIfTrue : exprIfFalse`
+  * **Bitwise:** `&` (AND), `|` (OR), `^` (XOR), `~` (NOT), `<<` (Left Shift), `>>` (Right Shift)
+
+* **`typeof` and Quirks**
+  * `typeof null` 👉 `"object"`
+  * `typeof []` (Array) 👉 `"object"`
+  * `typeof /regex/` (Regex) 👉 `"object"`
+  * `typeof function(){}` 👉 `"function"`
+
+* **`instanceof`**
+  Works on objects to check their prototype chain, not primitives.
+
+* **`NaN` (Not a Number)**
+  `NaN == NaN` and `NaN === NaN` both evaluate to `false`.
+
+---
+
 ## 📅 Day 17: Basic DOM
 
 ### 📝 Notes Summary
